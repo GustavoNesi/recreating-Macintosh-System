@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Chicago';
+    src: url('../public/fonts/ChicagoFLF.ttf') format('truetype'); /* Modifique o formato se for diferente */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'Chicago', sans-serif; /* Defina a fonte para o corpo ou outros elementos */
+    cursor: url('../public/normal.cur'), auto;
+  }
+
+  a, button, image {
+    cursor: url('../public/pointer.cur'), pointer;
+  }
+  
+  .old-screen {
+    filter: grayscale(100%) contrast(150%) brightness(80%) sepia(30%);
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.05) 1px,
+      rgba(0, 0, 0, 0.05) 2px,
+      rgba(0, 0, 0, 0.05) 3px
+    );
+    opacity: 0.95;
+    position: relative;
+    border-radius: 8px;
+  }
+  
+  .old-screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.05) 1px,
+      rgba(0, 0, 0, 0.05) 2px
+    );
+    pointer-events: none; /* Para garantir que o conteúdo abaixo continue clicável */
+    opacity: 0.3;
+  }
+  
